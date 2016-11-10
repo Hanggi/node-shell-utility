@@ -11,12 +11,16 @@ program
     .option('-t, --test', 'This is a test string.')
 
 
+
 program
     .command('hexcon [numbers...]')
     .description('input a series of numbers')
-    .action(function (numbers) {
-        // console.log(numbers)
-        hexcon.deal(numbers);
+    .option('-x, --hexa', 'input a hexa number.')
+    .action(function (numbers, options) {
+
+        var hexaMode = options.hexa;
+
+        hexcon.deal(numbers, hexaMode);
     })
 
 

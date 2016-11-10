@@ -40,14 +40,20 @@ var Hexcon = {
     headerMinLength: [2, 7, 4, 5, 6],
     columnMaxWidth: [2, 7, 4, 5, 6],
     data: [],
-    deal: function (numbers) {
+    deal: function (numbers, hexaMode) {
         var self = this;
         self.numLength = numbers.length;
 
         self.data.push(self.header);
 
+        if (hexaMode) {
+            for (let j = 0; j < self.numLength; j++) {
+                numbers[j] = parseInt(numbers[j], 16).toString();
+            }
+        }
         for (let i = 0; i < self.numLength; i++) {
             let arr = [];
+
             arr.push(index++);
             arr.push(numbers[i]);
             arr.push(parseInt(numbers[i]).toString(16));
@@ -67,7 +73,9 @@ var Hexcon = {
         let self = this;
         let row = '';
 
-        // print the header.
+        /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ *
+         * Top boundary of the frame
+         * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
         row += FRAME[2];
         for (let i = 0; i < self.header.length; i++) {
 
@@ -81,7 +89,9 @@ var Hexcon = {
         row += FRAME[3];
         console.log(row);
 
-            // main body
+            /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ *
+             * content body
+             * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
             row = '';
             for (let i = 0; i < self.data.length; i++) {
 
