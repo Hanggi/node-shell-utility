@@ -1,0 +1,24 @@
+{
+  "name": "node-shell-utility",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hanggi/node-shell-utility.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hanggi/node-shell-utility/issues"
+  },
+  "homepage": "https://github.com/Hanggi/node-shell-utility#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "colors": "^1.1.2",
+    "commander": "^2.9.0"
+  }
+}
