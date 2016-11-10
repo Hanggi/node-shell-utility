@@ -123,13 +123,13 @@ var Hexcon = {
 
                     // 4种结尾
                     if (i < self.data.length - 1) {
-                        if (j < self.data.length) {
+                        if (j < self.data.length - 1) {
                             row += FRAME[10];
                         }else {
                             row += FRAME[7];
                         }
                     }else {
-                        if (j < self.data.length) {
+                        if (j < self.data.length - 1) {
                             row += FRAME[8];
                         }else {
                             row += FRAME[5];
