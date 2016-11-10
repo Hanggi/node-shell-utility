@@ -3,12 +3,13 @@
 const program = require('commander');
 const hexcon = require('./hexcon/hexcon');
 
-console.log(process.version)
+// console.log(process.version);
 
 program
     .version('0.0.1')
     .option('-h, --help', 'This is a help.')
     .option('-t, --test', 'This is a test string.')
+    .parse(process.argv)
 
 
 
@@ -25,3 +26,6 @@ program
 
 
 program.parse(process.argv);
+
+
+console.log('test');
