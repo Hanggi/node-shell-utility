@@ -56,8 +56,8 @@ var Hexcon = {
 
             arr.push(index++);
             arr.push(numbers[i]);
-            arr.push(parseInt(numbers[i]).toString(16));
-            arr.push(parseInt(numbers[i]).toString(8));
+            arr.push('0x' + parseInt(numbers[i]).toString(16));
+            arr.push('0' + parseInt(numbers[i]).toString(8));
             arr.push(parseInt(numbers[i]).toString(2));
 
             self.data.push(arr);
