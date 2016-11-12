@@ -34,7 +34,7 @@ program
 
 
 program
-    .command('colors')
+    .command('chalk')
     .description('Show the chalk color list.')
     .action(function () {
         showChalk.show();
