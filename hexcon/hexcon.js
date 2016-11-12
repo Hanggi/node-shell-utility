@@ -1,17 +1,5 @@
 #!/usr/bin/env node
 
-// var program = require('commander');
-//
-// program
-//     .version('0.0.1')
-//     // .command('aaa [name]', 'abcdefg')
-//     .command('*')
-//     .action(function(env) {
-//         console.log(`abcde : %s`, env);
-//     });
-//
-// program.parse(process.argv);
-
 // const colors = require('colors');
 const chalk = require('chalk');
 
