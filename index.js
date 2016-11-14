@@ -4,6 +4,7 @@ const program = require('commander');
 const hexcon = require('./hexcon/hexcon');
 const chalk = require('chalk');
 const showChalk = require('./chalk');
+const showIp = require('./ip');
 
 // console.log(process.version);
 // console.log(``);
@@ -31,6 +32,12 @@ program
     })
 
 
+program
+    .command('ip')
+    .description('show ip')
+    .action(function () {
+        showIp.show();
+    })
 
 
 program
