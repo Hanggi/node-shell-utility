@@ -5,6 +5,7 @@ const hexcon = require('./hexcon/hexcon');
 const chalk = require('chalk');
 const showChalk = require('./chalk');
 const showIp = require('./ip');
+const hanggi = require('./hanggi');
 
 // console.log(process.version);
 // console.log(``);
@@ -37,6 +38,13 @@ program
     .description('show ip')
     .action(function () {
         showIp.show();
+    })
+
+program
+    .command('hanggi')
+    .description('show ip')
+    .action(function () {
+        hanggi.print();
     })
 
 
