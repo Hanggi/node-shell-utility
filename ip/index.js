@@ -17,7 +17,7 @@ var Ip = {
                         console.log(chalk.cyan(`City: ${bb.city}`));
                         console.log(chalk.cyan(`Region: ${bb.region}`));
                         console.log(chalk.cyan(`Country: ${bb.country}`));
-                        console.log(chalk.magenta(`Org: ${bb.org}`));
+                        console.log(chalk.magenta(`Organization: ${bb.org}`));
                         console.log(chalk.blue(`Location: ${bb.loc}`));
                     }
                 }
