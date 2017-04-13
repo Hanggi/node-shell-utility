@@ -1,11 +1,15 @@
 #!/usr/bin/env node
 
 const program = require('commander');
+const os = require('os');
+
 const hexcon = require('./hexcon/hexcon');
 const chalk = require('chalk');
 const showChalk = require('./chalk');
 const showIp = require('./ip');
 const hanggi = require('./hanggi');
+
+
 
 // console.log(process.version);
 // console.log(``);
@@ -38,6 +42,13 @@ program
     .description('show ip')
     .action(function () {
         showIp.show();
+    })
+
+program
+    .command('cpus')
+    .description('show cpus')
+    .action(function () {
+        console.log(os.cpus())
     })
 
 program
